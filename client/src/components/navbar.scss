@@ -1,0 +1,87 @@
+.navbar {
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+  
+    &._scrolled {
+      background-color: black;
+      margin-left: 0;
+    }
+  
+    .containernavbar {
+      padding: 0px 20px;
+      display: flex;
+      
+      justify-content: space-between;
+      height: 70px;
+  
+      .left {
+        
+        align-items: left;
+        margin-left: '0px';
+  
+        img {
+          height: 25px;
+          margin-right: 40px;
+  
+          
+        }
+  
+        span {
+          margin-right: 20px;
+          cursor: pointer;
+          color:black;
+  
+          
+  
+          &.navbarmainLinks {
+            color:white;
+          }
+        }
+      }
+  
+      .right {
+        display: flex;
+        align-items: right;
+  
+        .icon {
+          margin: 0px 15px;
+          cursor: pointer;
+          color:black;
+        }
+  
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 5px;
+          object-fit: cover;
+          cursor: pointer;
+        }
+  
+        .profile {
+          .options {
+            display: none;
+            background-color: black;
+            border-radius: 5px;
+          }
+  
+          span {
+            padding: 10px;
+            cursor: pointer;
+          }
+  
+          &:hover {
+            .options {
+              display: flex;
+              flex-direction: column;
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
