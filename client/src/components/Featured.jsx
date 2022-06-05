@@ -9,7 +9,7 @@ export default function Featured({ type, setGenre }) {
     useEffect(() => {
       const getRandomContent = async () => {
         try {
-          const res = await axios.get(`movies/random?type=${type}`);
+          const res = await axios.get(`/api/movies/random?type=${type}`);
          
           setContent(res.data[0]);
         } catch (err) {

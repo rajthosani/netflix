@@ -3,6 +3,7 @@ import {useDispatch} from "react-redux";
 import { setUser } from "../../context/UserActions";
 import axios from 'axios';
 import { Navigate, useNavigate } from "react-router-dom";
+import { loginuser } from "../../service";
 
 import "./login.css";
 
@@ -18,8 +19,9 @@ export default function Login() {
 
   const handleLogin = async(e) => {
     e.preventDefault();
-    let data={email,password};
-    const res=await axios.post('auth/login',data);
+    //let data={email,password};
+    //const res=await axios.post('/auth/login',data);
+    const res= await loginuser(email,password);
     dispatch(setUser(res?.data));
     navigate("/");
 

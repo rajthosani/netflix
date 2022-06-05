@@ -19,7 +19,7 @@ export default function Listitem({ index, item }) {
     const getMovie = async () => {
       try {
         
-        const res = await axios.get("/movies/find/" + item );
+        const res = await axios.get("/api/movies/find/" + item );
         res&&setMovie(res.data);
       } catch (err) {
         console.log(err);

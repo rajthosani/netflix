@@ -23,11 +23,11 @@ const Home = ( type ) => {
       try {
         if(currtype=="series"){
           setlist({});
-          const res=await axios.get("lists?type=series");
+          const res=await axios.get("/api/lists?type=series");
           setlist(res?.data);
         }else{
           setlist({});
-          const res=await axios.get("lists?type=movie");
+          const res=await axios.get("/api/lists?type=movie");
           setlist(res?.data);
         }
         

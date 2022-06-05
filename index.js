@@ -11,7 +11,7 @@ const path=require("path");
 
 
 //const MONGO_URL="mongodb+srv://raj:thosani8281@netflix.izj6l.mongodb.net/test";
-const PORT=8800;
+const PORT=process.env.PORT||8800;
 mongoose
   .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
