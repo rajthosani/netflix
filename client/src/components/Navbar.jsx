@@ -2,16 +2,23 @@ import { ArrowDropDown, Notifications, Search} from "@mui/icons-material";
 import { useContext, useState } from "react";
 import "./navbar.scss";
 import { Link } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux";
+import { logout } from "../context/UserActions";
 //import { AuthContext } from "../../authContext/AuthContext";
 //import { logout } from "../../authContext/AuthActions";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-
+  const {user}=useSelector(state=>state.UserReducer);
+  const dispatch=useDispatch();
   window.onscroll = () => {
     setIsScrolled(window.pageYOffset === 0 ? false : true);
     return () => (window.onscroll = null);
   };
+
+  /*const handlelogout=()=>{
+    dispatch(logout());
+  }*/
   return (
     <div className={isScrolled ? "navbar scrolled" : "navbar"}>
       <div className="containernavbar">
@@ -34,7 +41,7 @@ const Navbar = () => {
         </div>
         <div className="right">
           <Search className="icon" />
-          <span>KID</span>
+          <span>{user?.username}</span>
           <Notifications className="icon" />
           <img
             src="https://images.pexels.com/photos/6899260/pexels-photo-6899260.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
@@ -44,7 +51,7 @@ const Navbar = () => {
             <ArrowDropDown className="icon" />
             <div className="options">
               <span>Settings</span>
-              <span>Logout</span>
+              <span >Logout</span>
             </div>
           </div>
         </div>

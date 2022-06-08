@@ -19,10 +19,10 @@ function App() {
             
           <Routes>
             
-            <Route exact path="/" element={user.username?<Home/>:<Login/>}></Route>
+            <Route exact path="/" element={user?.username?<Home/>:<Login/>}></Route>
             
-            <Route path="/login" element={user.username?<Navigate to="/"/>:<Login/>}></Route>
-            <Route path="/register" element={user.username?<Navigate to="/"/>:<Register/>}></Route>
+            <Route path="/login" element={user?.username?<Navigate to="/"/>:<Login/>}></Route>
+            <Route path="/register" element={user?.username?<Navigate to="/"/>:<Register/>}></Route>
             
             <Route path="/movies" element={<Home type="movie"/>}></Route>
             <Route path="/series" element={<Home type="series"/>}></Route>

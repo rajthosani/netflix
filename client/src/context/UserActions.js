@@ -35,5 +35,14 @@ export const resetLists=()=>async(dispatch)=>{
     }
 };
 
+export const logout=()=>async(dispatch)=>{
+    try{
+        
+        
+        dispatch({type:"LOGOUT"});
 
+
+    }catch(error){
+    }
+};
 

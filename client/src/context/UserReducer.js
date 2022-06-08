@@ -5,6 +5,9 @@ export const UserReducer=(state={ user:{} }, action)=>{
 
         case 'ADD_USER_FAIL':
             return {user:action.payload}
+
+        case 'LOGOUT':
+            return {user:null}
         
         default:
             return state    

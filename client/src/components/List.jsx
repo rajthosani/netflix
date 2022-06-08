@@ -15,7 +15,7 @@ export default function List({finallist}) {
   const [content,setcontent]=useState();
   const [slideNumber, setSlideNumber] = useState(0);
   const [clickLimit, setClickLimit] = useState(window.innerWidth / 230);
-  console.log('list is',finallist);
+  //console.log('list is',finallist);
 
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function List({finallist}) {
   
 
   const listRef = useRef();
-  console.log('content is',content);
+  //console.log('content is',content);
 
   const handleClick = (direction) => {
     setIsMoved(true);

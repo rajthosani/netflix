@@ -39,12 +39,15 @@
         flex-direction: column;
         justify-content: space-around;}
   
-.input {
-          height: 40px;
+.inputlogin {
+          height: 80px;
           border-radius: 5px;
+          width: 300px;
+          margin-bottom: 10px;
           
           color:black;
-          padding-left: 10px;}
+          padding-left: 10px;
+        }
   
           
         
